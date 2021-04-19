@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dip"
+    android:paddingTop="5dip"
+    android:paddingRight="5dip"
+    android:paddingBottom="5dip"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:weightSum="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:weightSum="3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutRollText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/data1"
+                    android:layout_width="90sp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:cursorVisible="false"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/data2"
+                    android:layout_width="90sp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textCursorDrawable="@null"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="="
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:focusable="false"
+                    android:id="@+id/data_res"
+                    android:layout_width="90sp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textCursorDrawable="@null"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+
+                <Button
+                    android:id="@+id/btnTargetDefaultReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="2sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:minWidth="70dip"
+                    android:onClick="handleAllReset"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/btn_reset"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linearLayoutRollBtn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnRollDefault1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dp"-->
+<!--                    android:onClick="handleRollDefault1"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_1"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnRollDefault2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dp"-->
+<!--                    android:onClick="handleRollDefault2"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_2"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnRollDefault3"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dp"-->
+<!--                    android:onClick="handleRollDefault3"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_3"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnRollDefault4"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dp"-->
+<!--                    android:onClick="handleRollDefault4"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_4"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnRollDefault5"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dp"-->
+<!--                    android:onClick="handleRollDefault5"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_5"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnRollDefault10"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dp"-->
+<!--                    android:onClick="handleRollDefault10"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_10"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnRollDefault20"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dp"-->
+<!--                    android:onClick="handleRollDefault20"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_20"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnRollReset"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dp"-->
+<!--                    android:onClick="handleRollReset"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_reset"-->
+<!--                    android:textSize="13sp" />-->
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:weightSum="3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTargetText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/label2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="骰子面数："-->
+<!--                    android:textSize="18sp" />-->
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linearLayoutTargetBtn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnTargetDefault2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dip"-->
+<!--                    android:onClick="handleTargetDefault2"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_2"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnTargetDefault3"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dip"-->
+<!--                    android:onClick="handleTargetDefault3"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_3"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnTargetDefault4"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dip"-->
+<!--                    android:onClick="handleTargetDefault4"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_4"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnTargetDefault5"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dip"-->
+<!--                    android:onClick="handleTargetDefault5"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_5"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnTargetDefault10"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dip"-->
+<!--                    android:onClick="handleTargetDefault10"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_10"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnTargetDefault50"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dip"-->
+<!--                    android:onClick="handleTargetDefault50"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_50"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnTargetDefault100"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dip"-->
+<!--                    android:onClick="handleTargetDefault100"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_default_100"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnTargetDefaultReset"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="2sp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:minWidth="70dip"-->
+<!--                    android:onClick="handleTargetReset"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:text="@string/btn_reset"-->
+<!--                    android:textSize="13sp" />-->
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnStartRoll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="roll"
+                android:text="@string/btn_roll"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewLog" />
+
+            <Button
+                android:id="@+id/btnResetLog"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="resetLog"
+                android:text="@string/btn_reset_log"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnStartRoll" />
+
+            <Button
+                android:id="@+id/btnChangeRoll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="5dp"
+                android:onClick="changeRoll"
+                android:text="@string/btn_reset_roll"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnResetLog" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewLog"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="4dp"
+                android:minHeight="100dp"
+                android:scrollbarStyle="outsideInset"
+                android:scrollbars="vertical"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/debugCheckBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="5dp"-->
+<!--        android:layout_marginTop="-1dp"-->
+<!--        android:layout_marginBottom="386dp"-->
+<!--        android:layout_x="5dp"-->
+<!--        android:layout_y="5dp"-->
+<!--        android:text="@string/checkbox_debug"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

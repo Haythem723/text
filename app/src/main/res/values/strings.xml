@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Roll</string>
+    <string name="data_text_1">骰子数量:</string>
+    <string name="data_text_2">骰子面数:</string>
+    <string name="data_text_3">保底:</string>
+    <string name="tip_text">这里是日志</string>
+    <string name="btn_default_1">1</string>
+    <string name="btn_default_2">2</string>
+    <string name="btn_default_3">3</string>
+    <string name="btn_default_4">4</string>
+    <string name="btn_default_5">5</string>
+    <string name="btn_default_10">10</string>
+    <string name="btn_default_20">20</string>
+    <string name="btn_default_30">30</string>
+    <string name="btn_default_40">40</string>
+    <string name="btn_default_50">50</string>
+    <string name="btn_default_60">60</string>
+    <string name="btn_default_70">70</string>
+    <string name="btn_default_80">80</string>
+    <string name="btn_default_90">90</string>
+    <string name="btn_default_100">100</string>
+    <string name="btn_add_1">+1</string>
+    <string name="btn_add_5">+5</string>
+    <string name="btn_add_10">+10</string>
+    <string name="btn_sub_1">-1</string>
+    <string name="btn_sub_5">-5</string>
+    <string name="btn_sub_10">-10</string>
+    <string name="btn_reset">重置</string>
+    <string name="btn_roll">投掷</string>
+    <string name="btn_reset_roll">换骰</string>
+    <string name="btn_reset_log">清空日志</string>
+    <string name="checkbox_debug">DebugMode</string>
+    <string name="title_activity_numpad">Numpad</string>
+    <string name="debug_mode">专家模式</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+</resources>
