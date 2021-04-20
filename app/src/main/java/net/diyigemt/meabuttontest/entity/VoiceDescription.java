@@ -6,7 +6,10 @@ public class VoiceDescription {
   private String voiceName = "";
   private String voiceDescription;
   private String md5 = "";
+<<<<<<< HEAD
   String s = null;
+=======
+>>>>>>> 6c21d511960675654b9c7077a798cb54dcc4debc
 
   public VoiceDescription(String voiceName, String voiceDescription) {
     this.voiceName = voiceName;
@@ -14,9 +17,15 @@ public class VoiceDescription {
   }
 
   public VoiceDescription(String voiceName, String voiceDescription, String md5) {
+<<<<<<< HEAD
     this.voiceName = voiceName.substring(voiceName.lastIndexOf(":") + 1);
     this.voiceDescription = voiceDescription.substring(voiceDescription.lastIndexOf(":") + 1);
     this.md5 = md5.substring(md5.lastIndexOf(":") + 1);
+=======
+    this.voiceName = voiceName;
+    this.voiceDescription = voiceDescription;
+    this.md5 = md5;
+>>>>>>> 6c21d511960675654b9c7077a798cb54dcc4debc
   }
 
   public String getDownloadURL() {
