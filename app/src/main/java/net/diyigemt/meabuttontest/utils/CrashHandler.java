@@ -1,4 +1,4 @@
-package com.example.ailipay;
+package net.diyigemt.meabuttontest.utils;
 
 import android.Manifest;
 import android.app.Activity;

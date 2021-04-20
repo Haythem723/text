@@ -27,6 +27,7 @@ import android.widget.Toast;
 import net.diyigemt.meabuttontest.MeaSounds;
 import net.diyigemt.meabuttontest.requestresult.IRequestPermissionsResult;
 import net.diyigemt.meabuttontest.requestresult.RequestPermissionsResultSetApp;
+import net.diyigemt.meabuttontest.utils.CrashHandler;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -69,6 +70,10 @@ public class MainActivity extends AppCompatActivity{
     filter.addAction(Numpad.ACTION);
     registerReceiver(broadcastReceiver, filter);
     numpad = new Intent(MainActivity.this, Numpad.class);
+
+    //errLOG
+    CrashHandler crashHandler = CrashHandler.getInstance();
+    crashHandler.init(getApplicationContext());
   }
 
   @Override

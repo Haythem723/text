@@ -111,9 +111,14 @@ public class MeaSounds {
         }
         Intent intent = new Intent(activity.getApplicationContext(), DownloadService.class);
         intent.putExtra(DownloadService.ACTION, i);
+        String path = fileUtils.getFileDir(voiceDescription.getVoiceName());
+        String MD5 = voiceDescription.getMd5();
+        intent.putExtra(DownloadService.PATH, path);
+        intent.putExtra(DownloadService.MD5, MD5);
         activity.startService(intent);
       }
     }
+
   }
 
   //请求权限
