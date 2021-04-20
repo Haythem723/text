@@ -1,18 +1,21 @@
 package net.diyigemt.meabuttontest.entity;
 
 import net.diyigemt.meabuttontest.utils.Constant;
-import net.diyigemt.meabuttontest.utils.FileUtils;
-
-import java.net.MalformedURLException;
-import java.net.URL;
 
 public class VoiceDescription {
   private String voiceName = "";
   private String voiceDescription;
+  private String md5 = "";
 
   public VoiceDescription(String voiceName, String voiceDescription) {
     this.voiceName = voiceName;
     this.voiceDescription = voiceDescription;
+  }
+
+  public VoiceDescription(String voiceName, String voiceDescription, String md5) {
+    this.voiceName = voiceName;
+    this.voiceDescription = voiceDescription;
+    this.md5 = md5;
   }
 
   public String getDownloadURL() {
@@ -35,4 +38,15 @@ public class VoiceDescription {
     this.voiceDescription = voiceDescription;
   }
 
+  public String getMd5() {
+    return md5;
+  }
+
+  public void setMd5(String md5) {
+    this.md5 = md5;
+  }
+
+  public boolean verifyMD5(String md5) {
+    return this.md5.equals(md5);
+  }
 }

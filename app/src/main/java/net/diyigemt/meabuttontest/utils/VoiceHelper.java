@@ -18,10 +18,9 @@ public class VoiceHelper {
     BufferedReader readL = new BufferedReader(reader);
     String s;
     while ((s = readL.readLine()) != null) {
-      int index = s.indexOf("description");
-      String voiceName = s.substring(Constant.FILE_NAME_LENGTH, index);
-      String voiceDescription = s.substring(index + Constant.FILE_DESCRIPTION_LENGTH);
-      VoiceDescription t = new VoiceDescription(voiceName, voiceDescription);
+      String[] split = s.split(";");
+      if (split.length != 3) continue;
+      VoiceDescription t = new VoiceDescription(split[0], split[1], split[2]);
       VoiceHelper.voiceExist.add(t);
     }
     try {
